@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	mjsonl "github.com/nikolaydubina/multiline-jsonl"
+	"github.com/nikolaydubina/multiline-jsonl/mjsonl"
 )
 
 func main() {

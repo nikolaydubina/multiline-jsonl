@@ -1,7 +1,10 @@
-This package was build for programmatic access of multiline JSON in Go.
-If you need CLI for JSON, I highly recommend `jq`.
+> This package was build for programmatic access of multiline JSON in Go. If you need CLI for JSON, I highly recommend `jq`.
 
-For example you want to parse input JSONs some of which are multiline into one line per JSON
+```bash
+$ go install github.com/nikolaydubina/multiline-jsonl
+```
+
+For example, you want to parse input multiline JSONs
 ```bash
 $ echo '{
     "from":"github.com/nikolaydubina/jsonl-graph/graph",
@@ -33,7 +36,7 @@ Outputs shortened version
 {"id":"my-id","nested":{"nested-level-2":{"count":123,"subtitle":"some other thing"},"title":"big title"},"number":123}
 ```
 
-Or you can also expand with `-expand` flag to
+And with `-expand` flag
 ```json
 {
     "from": "github.com/nikolaydubina/jsonl-graph/graph",

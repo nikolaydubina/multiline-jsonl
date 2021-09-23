@@ -7,7 +7,7 @@ import (
 
 	_ "embed"
 
-	mjsonl "github.com/nikolaydubina/multiline-jsonl"
+	"github.com/nikolaydubina/multiline-jsonl/mjsonl"
 )
 
 //go:embed testdata/example.jsonl
