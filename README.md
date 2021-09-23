@@ -23,6 +23,7 @@ $ echo '{
         }
     }
 }' | ./multiline-jsonl
+```
 
 Outputs shortened version
 ```jsonl
