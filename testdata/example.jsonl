@@ -1,0 +1,20 @@
+{
+    "from":"github.com/nikolaydubina/jsonl-graph/graph",
+    "to":"bufio"
+}
+
+{"from":"my-id-1","to":"my-id-2"}
+{"from":"my-id-5","to":"my-id-10", "amount": 123}
+{"from":"my-id-5","to":"my-id-10", "amount": {"amount": 123, "currency": "KRW"}}
+
+{
+    "id": "my-id",
+    "number": 123,
+    "nested": {
+        "title": "big title",
+        "nested-level-2": {
+            "subtitle": "some other thing",
+            "count": 123
+        }
+    }
+}
