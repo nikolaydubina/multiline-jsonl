@@ -1,7 +1,8 @@
-> This package was build for programmatic access of multiline JSON in Go. If you need CLI for JSON, I highly recommend `jq`.
+> This package was build for programmatic access of multiline JSON in Go.  
+> If you need CLI for JSON, I highly recommend `jq`.
 
 ```bash
-$ go install github.com/nikolaydubina/multiline-jsonl
+$ go install github.com/nikolaydubina/multiline-jsonl@latest
 ```
 
 For example, you want to parse input multiline JSONs
@@ -25,7 +26,9 @@ $ echo '{
             "count": 123
         }
     }
-}' | ./multiline-jsonl
+}
+
+' | ./multiline-jsonl
 ```
 
 Outputs shortened version
