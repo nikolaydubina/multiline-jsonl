@@ -1,7 +1,7 @@
 > This package was build for programmatic access of multiline JSON in Go.  
 > If you need CLI for JSON, I highly recommend `jq`.
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/nikolaydubina/multiline-jsonl.svg)](https://pkg.go.dev/github.com/nikolaydubina/multiline-jsonl)
+[![Go Reference](https://pkg.go.dev/badge/github.com/nikolaydubina/multiline-jsonl/mjsonl.svg)](https://pkg.go.dev/github.com/nikolaydubina/multiline-jsonl/mjsonl)
 
 ```bash
 $ go install github.com/nikolaydubina/multiline-jsonl@latest
