@@ -32,10 +32,7 @@ func FormatJSONL(r io.Reader, o io.Writer, expand bool) error {
 			return fmt.Errorf("can not encode json: %w", err)
 		}
 
-		outJSON = append(outJSON, '\n')
-
-		_, err = o.Write(outJSON)
-		if err != nil {
+		if _, err := o.Write([]byte(string(outJSON) + "\n")); err != nil {
 			return fmt.Errorf("can not write json bytes: %w", err)
 		}
 	}

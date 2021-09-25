@@ -38,7 +38,8 @@ func SplitMultilineJSONL(data []byte, atEOF bool) (advance int, token []byte, er
 	}
 
 	if openCount > 0 {
-		return 0, nil, errors.New("got more { than }")
+		// requesting to read more data
+		return 0, nil, nil
 	}
 	if openCount < 0 {
 		return 0, nil, errors.New("got more } than {")
