@@ -1,7 +1,10 @@
-> This package was build for programmatic access of multiline JSON in Go. If you need CLI for JSON, I highly recommend `jq`.
+> This package was build for programmatic access of multiline JSON in Go.  
+> If you need CLI for JSON, I highly recommend `jq`.
+
+[![Go Reference](https://pkg.go.dev/badge/github.com/nikolaydubina/multiline-jsonl/mjsonl.svg)](https://pkg.go.dev/github.com/nikolaydubina/multiline-jsonl/mjsonl)
 
 ```bash
-$ go install github.com/nikolaydubina/multiline-jsonl
+$ go install github.com/nikolaydubina/multiline-jsonl@latest
 ```
 
 For example, you want to parse input multiline JSONs
@@ -25,7 +28,9 @@ $ echo '{
             "count": 123
         }
     }
-}' | ./multiline-jsonl
+}
+
+' | ./multiline-jsonl
 ```
 
 Outputs shortened version
@@ -73,48 +78,7 @@ And with `-expand` flag
 }
 ```
 
-You can use it in your own projects. 
-Here is example that powers this CLI.
-
-```go
-func FormatJSONL(r io.Reader, o io.Writer, expand bool) error {
-	scanner := bufio.NewScanner(r)
-	scanner.Split(SplitMultilineJSONL)
-
-	for scanner.Scan() {
-		decoder := json.NewDecoder(bytes.NewReader(scanner.Bytes()))
-		decoder.UseNumber()
-
-		var inJSON map[string]interface{}
-		if err := decoder.Decode(&inJSON); err != nil {
-			return fmt.Errorf("can not decode json: %w", err)
-		}
-
-		var outJSON []byte
-		var err error
-		if expand {
-			outJSON, err = json.MarshalIndent(inJSON, "", "    ")
-		} else {
-			outJSON, err = json.Marshal(inJSON)
-		}
-
-		if err != nil {
-			return fmt.Errorf("can not encode json: %w", err)
-		}
-
-		outJSON = append(outJSON, '\n')
-
-		_, err = o.Write(outJSON)
-		if err != nil {
-			return fmt.Errorf("can not write json bytes: %w", err)
-		}
-	}
-
-	return scanner.Err()
-}
-```
-
-And here is example from https://github.com/nikolaydubina/jsonl-graph
+Here is example from https://github.com/nikolaydubina/jsonl-graph
 
 ```go
 func NewGraphFromJSONL(r io.Reader) (Graph, error) {
@@ -154,6 +118,7 @@ func NewGraphFromJSONL(r io.Reader) (Graph, error) {
 - [x] No reflection
 - [x] Simple Code
 - [x] CLI
+- [x] 84% coverage
 
 ## Reference:
 - https://github.com/wlredeye/jsonlines - reflection, no scanner.Split, no multiline
