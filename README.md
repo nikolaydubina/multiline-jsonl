@@ -2,6 +2,7 @@
 > If you need CLI for JSON, I highly recommend `jq`.
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/nikolaydubina/multiline-jsonl/mjsonl.svg)](https://pkg.go.dev/github.com/nikolaydubina/multiline-jsonl/mjsonl)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nikolaydubina/multiline-jsonl)](https://goreportcard.com/report/github.com/nikolaydubina/multiline-jsonl)
 
 ```bash
 $ go install github.com/nikolaydubina/multiline-jsonl@latest
