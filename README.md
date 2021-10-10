@@ -121,7 +121,7 @@ func NewGraphFromJSONL(r io.Reader) (Graph, error) {
 - [x] CLI
 - [x] 84% coverage
 
-## Reference:
+## Reference
 - https://github.com/wlredeye/jsonlines - reflection, no scanner.Split, no multiline
 - https://github.com/neilotoole/sq - no scanner.Split, no multiline
 - https://github.com/emersion/go-jsonld - custom json tags, no multiline
