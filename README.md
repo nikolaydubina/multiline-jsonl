@@ -1,3 +1,7 @@
+> **Note** `2022-06-11`: first check this https://pkg.go.dev/encoding/json#Decoder
+
+---
+
 > This package was build for programmatic access of multiline JSON in Go.  
 > If you need CLI for JSON, I highly recommend `jq`.
 
